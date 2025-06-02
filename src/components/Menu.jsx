@@ -13,6 +13,7 @@ import React from 'react';
 function Menu() {
   return (
     <div>
+      <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
