@@ -1,23 +1,26 @@
+import React from 'react';
+
+import pizzaData from '../data';
+
 function Pizza() {
   return (
     <div>
       <img src="./pizzas/focaccia.jpg" alt="" />
-      <h2>Pizza</h2>
+      <h3>Pizza</h3>
       <p>yummyyyy!!</p>
     </div>
   );
 }
 
-import React from 'react';
-
+console.log(pizzaData);
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
-    </div>
+    </main>
   );
 }
 
