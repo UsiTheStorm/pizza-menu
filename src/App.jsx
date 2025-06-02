@@ -1,16 +1,17 @@
-// import React from 'react';
+import React from 'react';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 import './App.css';
 
-function Pizza() {
-  return <h2>Pizza</h2>;
-}
-
 function App() {
   return (
-    <div>
-      <Pizza />
-    </div>
+    <>
+      <Header />
+      <Menu />
+      <Footer />
+    </>
   );
 }
 
