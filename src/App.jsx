@@ -1,16 +1,11 @@
-// import React from 'react';
+import React from 'react';
 
 import './App.css';
 
-function Pizza() {
-  return <h2>Pizza</h2>;
-}
-let a = 3;
-
 function App() {
   return (
-    <div>
-      <Pizza />
+    <div className="App">
+      <h1>hello world</h1>
     </div>
   );
 }
