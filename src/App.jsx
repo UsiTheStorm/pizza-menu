@@ -1,11 +1,15 @@
-import React from 'react';
+// import React from 'react';
 
 import './App.css';
 
+function Pizza() {
+  return <h2>Pizza</h2>;
+}
+
 function App() {
   return (
-    <div className="App">
-      <h1>hello world</h1>
+    <div>
+      <Pizza />
     </div>
   );
 }
