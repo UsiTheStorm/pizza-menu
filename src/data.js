@@ -28,7 +28,7 @@ const pizzaData = [
     soldOut: false,
   },
   {
-    name: 'Pizza Salamino',
+    name: 'Pizza Pepperoni',
     ingredients: 'Tomato, mozarella, and pepperoni',
     price: 15,
     photoName: 'pizzas/salamino.jpg',
