@@ -2,16 +2,18 @@ import React from 'react';
 
 import pizzaData from '../data';
 
-function Pizza({ name, ingredients, photoName, price }) {
+function Pizza({ pizzaObj }) {
+  console.log(pizzaObj);
+  const { name, ingredients, price, photoName } = pizzaObj;
   return (
-    <div className="pizza">
+    <li className="pizza">
       <img src={photoName} alt={name} />
       <div>
         <h3>{name}</h3>
         <p>{ingredients}</p>
+        <span>{price}$</span>
       </div>
-      <span>{price}$</span>
-    </div>
+    </li>
   );
 }
 
@@ -20,21 +22,13 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <div className="pizzas">
-        {pizzaData.map(({ name, ingredients, photoName, price }) => (
-          <Pizza
-            key={name}
-            name={name}
-            ingredients={ingredients}
-            photoName={photoName}
-            price={price}
-          />
+      <ul className="pizzas">
+        {pizzaData.map((pizza) => (
+          <Pizza key={pizza.name} pizzaObj={pizza} />
         ))}
-      </div>
+      </ul>
     </main>
   );
 }
 
 export default Menu;
-
-// export default Pizza;
