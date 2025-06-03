@@ -2,12 +2,15 @@ import React from 'react';
 
 import pizzaData from '../data';
 
-function Pizza() {
+function Pizza({ name, ingredients, photoName, price }) {
   return (
-    <div>
-      <img src="./pizzas/focaccia.jpg" alt="" />
-      <h3>Pizza</h3>
-      <p>yummyyyy!!</p>
+    <div className="pizza">
+      <img src={photoName} alt={name} />
+      <div>
+        <h3>{name}</h3>
+        <p>{ingredients}</p>
+      </div>
+      <span>{price}$</span>
     </div>
   );
 }
@@ -17,9 +20,17 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <div className="pizzas">
+        {pizzaData.map(({ name, ingredients, photoName, price }) => (
+          <Pizza
+            key={name}
+            name={name}
+            ingredients={ingredients}
+            photoName={photoName}
+            price={price}
+          />
+        ))}
+      </div>
     </main>
   );
 }
