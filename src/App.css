@@ -110,6 +110,12 @@ body {
   gap: 3.2rem;
 }
 
+@media (max-width: 768px) {
+  .pizzas {
+    grid-template-columns: 1fr;
+  }
+}
+
 .pizza img {
   width: 12rem;
   aspect-ratio: 1;
