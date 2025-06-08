@@ -2,14 +2,14 @@ import React from 'react';
 
 import pizzaData from '../data';
 
-function Pizza({ pizzaObj: { name, ingredients, price, photoName } }) {
+function Pizza({ pizzaObj: { name, ingredients, price, photoName, soldOut } }) {
   return (
-    <li className="pizza">
+    <li className={soldOut ? `pizza sold-out` : `pizza`}>
       <img src={photoName} alt={name} />
       <div>
         <h3>{name}</h3>
         <p>{ingredients}</p>
-        <span>{price}$</span>
+        <span>{soldOut ? 'SOLD OUT' : price}</span>
       </div>
     </li>
   );
