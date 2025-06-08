@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Footer() {
   const hour = new Date().getHours();
   const openHour = 12;
